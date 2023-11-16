@@ -24,8 +24,8 @@ namespace SquareCalculator.Lib.Figures
         /// Radius of the circle.
         /// </summary>
         public double Radius { get; }
-        
-        public override double CalculateSquare()
+
+        protected override double CalculateSquare()
         {
             return Math.PI * Radius * Radius;
         }

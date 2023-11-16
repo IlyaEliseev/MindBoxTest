@@ -15,7 +15,7 @@ namespace FigureSquareCalculator.Tests
             var sut = new Circle(radius);
 
             // act
-            var sutResult = sut.CalculateSquare();
+            var sutResult = sut.Square;
 
             // assert
             Assert.Equal(expectedSquare, sutResult);

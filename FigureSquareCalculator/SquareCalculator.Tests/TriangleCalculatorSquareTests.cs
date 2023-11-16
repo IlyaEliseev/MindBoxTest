@@ -18,7 +18,7 @@ namespace FigureSquareCalculator.Tests
             var expectedSquare = Math.Sqrt(halfPerimetr * (halfPerimetr - sideA) * (halfPerimetr - sideB) * (halfPerimetr - sideC));
 
             // act
-            var sutResult = sut.CalculateSquare();
+            var sutResult = sut.Square;
 
             // assert
             Assert.Equal(expectedSquare, sutResult);

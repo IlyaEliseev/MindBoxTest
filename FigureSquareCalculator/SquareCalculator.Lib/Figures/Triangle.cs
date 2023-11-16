@@ -45,18 +45,18 @@ namespace SquareCalculator.Lib.Figures
         /// </summary>
         /// <returns>True if right triangle and false is not right triangle.</returns>
         public bool IsRightTriangle { get; }
-        
+
+        protected override double CalculateSquare()
+        {
+            var halfPerimetr = (SideA + SideB + SideC) / 2;
+            return Math.Sqrt(halfPerimetr * (halfPerimetr - SideA) * (halfPerimetr - SideB) * (halfPerimetr - SideC));
+        }
+
         private bool CheckRightTriangle()
         {
             var maxSide = Math.Max(SideA, Math.Max(SideB, SideC));
             var radius = maxSide / 2;
             return 8 * Math.Pow(radius, 2) == Math.Pow(SideA, 2) + Math.Pow(SideB, 2) + Math.Pow(SideC, 2);
-        }
-        
-        public override double CalculateSquare()
-        {
-            var halfPerimetr = (SideA + SideB + SideC) / 2;
-            return Math.Sqrt(halfPerimetr * (halfPerimetr - SideA) * (halfPerimetr - SideB) * (halfPerimetr - SideC));
         }
     }
 }
