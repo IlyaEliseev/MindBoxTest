@@ -22,6 +22,7 @@ namespace SquareCalculator.Lib.Figures
             SideA = sideA;
             SideB = sideB;
             SideC = sideC;
+            IsRightTriangle = CheckRightTriangle();
         }
 
         /// <summary>
@@ -43,7 +44,7 @@ namespace SquareCalculator.Lib.Figures
         /// Checking is right triangle.
         /// </summary>
         /// <returns>True if right triangle and false is not right triangle.</returns>
-        public bool IsRightTriangle => CheckRightTriangle();
+        public bool IsRightTriangle { get; }
         
         private bool CheckRightTriangle()
         {
