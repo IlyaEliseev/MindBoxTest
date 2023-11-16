@@ -22,7 +22,7 @@ namespace FigureSquareCalculator.Tests
         }
 
         [Fact]
-        public void Circle_square_when_radius_less_then_zero()
+        public void Circle_when_radius_less_then_zero()
         {
             // assert
             Assert.Throws<ArgumentOutOfRangeException>(() => new Circle(-10));
